@@ -37,12 +37,25 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 /* write all the steps invloved */
 
 **PROGRAM**
-
+module Exp6(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
+<img width="1920" height="1080" alt="Screenshot 2025-10-19 202025" src="https://github.com/user-attachments/assets/681da87d-c760-4829-a4c9-d9fce4668d4a" />
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+<img width="1920" height="1080" alt="Screenshot 2025-10-09 092919" src="https://github.com/user-attachments/assets/76fc27b8-4bf8-441e-9db6-f2922f0a0577" />
 
 **RESULTS**
+Thus the SR Flipflop using case implemented using verilog successfully
